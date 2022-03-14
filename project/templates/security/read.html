@@ -1,0 +1,30 @@
+{% extends "security/base.html" %}
+{% block content %}
+    <div class="container-fluid mt-4">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Imagen url</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for element in data %}
+                    <tr>
+                        <th scope="row">{{ element.id }}</th>
+                        <td>{{ element.category }}</td>
+                        <td>{{ element.description }}</td>
+                        <td>{{ element.img }}</td>
+                        <td>
+                            <a href="security/edit/{{ element.id }}" class="btn btn-warning">Edit</a>
+                            <a href="security/eliminar/{{ element.id }}" class="btn btn-danger">Eliminar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}

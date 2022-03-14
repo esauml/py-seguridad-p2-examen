@@ -1,0 +1,9 @@
+// windows
+set FLASK_APP=project/
+set FLASK_DEBUG=1
+set FLASK_ENV=development
+
+// mac
+export FLASK_APP=project/
+export FLASK_DEBUG=1
+export FLASK_ENV=development
